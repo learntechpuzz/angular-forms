@@ -1,0 +1,58 @@
+<fieldset>
+  <legend>Reactive Form</legend>
+  <form
+    [formGroup]="formValidation"
+    (ngSubmit)="submitReactForm()"
+    style="height:200px;overflow-y:auto;"
+  >
+    <label class="col-md-4">Name:</label>
+    <input
+      id="reactName"
+      class="form-control col-md-8"
+      type="text"
+      formControlName="reactName"
+    />
+    <common-error-display
+      [error]="formValidation.get('reactName').errors"
+      [showError]="showError"
+    ></common-error-display>
+
+    <label class="col-md-4">Email:</label>
+    <input
+      id="reactEmail"
+      class="form-control col-md-8"
+      type="text"
+      formControlName="reactEmail"
+    />
+    <common-error-display
+      [error]="formValidation.get('reactEmail').errors"
+      [showError]="showError"
+    ></common-error-display>
+
+    <label class="col-md-4">DOB:</label>
+    <input
+      id="reactDob"
+      class="form-control col-md-8"
+      type="date"
+      formControlName="reactDob"
+    />
+    <common-error-display
+      [error]="formValidation.get('reactDob').errors"
+      [showError]="showError"
+    ></common-error-display>
+
+    <label class="col-md-4">Contact:</label>
+    <input
+      id="reactPhone"
+      class="form-control col-md-8"
+      type="text"
+      formControlName="reactPhone"
+    />
+    <common-error-display
+      [error]="formValidation.get('reactPhone').errors"
+      [showError]="showError"
+    ></common-error-display>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</fieldset>
